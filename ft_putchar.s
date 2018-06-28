@@ -6,7 +6,7 @@ section	.text
 
 _ft_putchar:
 	mov	rax, SYSCALL(4)
-	mov	rsi, rdi
+	mov	[rsi], rdi
 	mov rdi, 1
 	mov	rdx, 1
 	syscall

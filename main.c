@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <strings.h>
-//int	ft_isdigit(int i);
+/*//int	ft_isdigit(int i);
 //int	ft_isalpha(int i);
 //int	ft_isalnum(int i);
 int	ft_isascii(int c);
@@ -13,7 +13,12 @@ int	ft_isascii(int c);
 int	ft_puts(const char *s);
 void	ft_putstr(const char *s);
 void	ft_putchar(char c);
-void	ft_memset(void *s, int c, size_t len);
+void	*ft_memcpy(void *dest, void *src, size_t n);
+int	ft_strlen(char *s);
+int	ft_strcmp(char *s1, char *s2);
+void	ft_memset(void *s, int c, size_t len);*/
+//int	ft_cat(int fd);
+void	ft_putchar(char c);
 int	main()
 {
 	/*for(int i = 57; i <= 100; i++)
@@ -28,13 +33,20 @@ int	main()
 	ptr = ft_strcat(ptr, " hitfgfdffgfg");
 	printf("%s\n", ptr);
 	return 0;*/
+	/*
 	char hel[] = "hello world";
+	char hell[] = "Hello me";
 	ft_memset(hel, 'R', 5);
+	ft_memcpy(hell, "The best", 2);
+	ft_puts(hell);
 	ft_puts(hel);
+	printf("%d\n",ft_strlen("hello"));
 	ft_puts(NULL);
 	ft_puts("hello World");
 	ft_putstr("hello world");
 	ft_putchar('Q');
-	printf("%d\n", ft_isascii(-57));
+	printf("%d\n", ft_isascii(-57));*/
+	//ft_cat(0);
+	ft_putchar('\n');
 	return 0;
 }
