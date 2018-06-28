@@ -12,6 +12,8 @@ int	ft_isascii(int c);
 //char	*ft_strcat(char *dest, const char *src);
 int	ft_puts(const char *s);
 void	ft_putstr(const char *s);
+void	ft_putchar(char c);
+void	ft_memset(void *s, int c, size_t len);
 int	main()
 {
 	/*for(int i = 57; i <= 100; i++)
@@ -26,9 +28,13 @@ int	main()
 	ptr = ft_strcat(ptr, " hitfgfdffgfg");
 	printf("%s\n", ptr);
 	return 0;*/
+	char hel[] = "hello world";
+	ft_memset(hel, 'R', 5);
+	ft_puts(hel);
 	ft_puts(NULL);
 	ft_puts("hello World");
 	ft_putstr("hello world");
+	ft_putchar('Q');
 	printf("%d\n", ft_isascii(-57));
 	return 0;
 }
