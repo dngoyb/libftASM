@@ -14,8 +14,7 @@ _ft_strdup:
 	inc rdi
 	call _malloc
 	cmp rax, 0
-	je exit
-	mov		[rax + r14], byte 0
+	je exit	
 	mov rdi, rax
 	mov rsi, r13
 	mov rdx, r14
