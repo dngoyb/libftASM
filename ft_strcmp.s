@@ -1,8 +1,10 @@
-global	ft_strcmp
+global	_ft_strcmp
 
 section	.text
 
-ft_strcmp:
+_ft_strcmp:
+	push rbp
+	mov	rbp, rsp
 	xor rcx, rcx
 cmpr:
 	cmp [rdi + rcx], byte 0
@@ -14,10 +16,12 @@ cmpr:
 	jne exit
 	inc rcx
 	jmp cmpr
-results:
+exit:
 	mov r9, [rdi + r8]
 	mov r10, [rsi + r8]
 	sub r9, r10
 	mov rax, r9	
+	leave
+	ret
 ;int	strcmp(char *s1, char *s2)
 ;rda				rdi			rsi
