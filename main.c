@@ -20,10 +20,11 @@ void	ft_memset(void *s, int c, size_t len);*/
 //int	ft_cat(int fd);
 //char *ft_strncat(char *dst, char *src, size_t len); 
 //void	ft_putchar(char c);
-//int	ft_strcmp(char *s1, char *s2);
-char	*ft_strdup(char *s);
-int		ft_strlen(char *s);
-void	*ft_memcpy(void *s, void *s1, size_t n);
+int	ft_strcmp(char *s1, char *s2);
+int	ft_strncmp(char *s1, char *s2, size_t len);
+//char	*ft_strdup(char *s);
+//int		ft_strlen(char *s);
+//void	*ft_memcpy(void *s, void *s1, size_t n);
 int	main()
 {
 	/*for(int i = 57; i <= 100; i++)
@@ -38,10 +39,11 @@ int	main()
 	ptr = ft_strncat(ptr, " hitfgfdffgfg", 5);
 	printf("%s\n", ptr);
 	return 0;*/
-	//printf("%d\n", ft_strcmp("hello", "hello"));
-	char *str;
-	str = ft_strdup("Hello world");
-	printf("%s\n", str);
+	printf("%d\n", ft_strcmp("hello", "heLlo"));
+	printf("%d\n", ft_strncmp("hello", "hello", 2));
+	//char *str;
+	//str = ft_strdup("Hello world");
+	//printf("%s\n", str);
 	/*
 	char hel[] = "hello world";
 	char hell[] = "Hello me";
