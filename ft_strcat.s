@@ -3,6 +3,8 @@ global _ft_strcat
 section	.text
 
 _ft_strcat:
+	push rbp
+	mov rbp, rsp
 	xor	rcx, rcx
 	xor r8, r8
 	jmp len
@@ -22,4 +24,5 @@ cat:
 exit:
 	mov [rdi + rcx], byte 0
 	mov rax, rdi
+	leave
 	ret

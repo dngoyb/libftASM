@@ -4,8 +4,10 @@ section .text
 
 _ft_memcpy:
 	mov	rcx, rdx
+	cld
+	push rdi
 	repnz movsb
-	mov	rax, rdi
+	pop rax
 	ret
 
 
