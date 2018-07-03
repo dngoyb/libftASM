@@ -3,8 +3,6 @@ global _ft_strlen
 section .text
 
 _ft_strlen:
-	push rbp
-	mov	rbp, rsp
 	cmp rdi, 0
 	je	exit
 strle:
@@ -18,6 +16,5 @@ strle:
 	dec rax
 	ret
 exit:
-	mov	rax, 0
 	leave
 	ret

@@ -6,12 +6,10 @@ section .data
 section .text
 
 _ft_cat:
-	push rbp
-	mov	rbp, rsp
 	mov	r8, rdi
 read:
 	mov	rax, SYSCALL(3)
-	mov	rdi, 9
+	mov	rdi, r8
 	lea rsi, [rel buffer]
 	mov	rdx, 5000
 	syscall
@@ -27,5 +25,4 @@ write:
 	syscall
 	jmp	read
 exit:
-	leave
 	ret

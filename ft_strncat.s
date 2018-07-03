@@ -1,8 +1,8 @@
-global ft_strncat
+global _ft_strncat
 
 section .text
 
-ft_strncat:
+_ft_strncat:
 	push rbp
 	mov	 rbp, rsp
 	xor rcx, rcx

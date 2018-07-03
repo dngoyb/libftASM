@@ -1,8 +1,8 @@
-global ft_strcmp
+global _ft_strcmp
 
 section .text
 
-ft_strcmp:
+_ft_strcmp:
 	xor rcx, rcx
 	cmp [rdi + rcx], byte 0
 	je	exit
@@ -13,7 +13,7 @@ ft_strcmp:
 	je	exit
 	jne exit
 	inc rcx
-	jmp	ft_strcmp
+	jmp	_ft_strcmp
 exit:
 	mov	r8, [rdi + rcx]
 	mov	r9, [rsi + rcx]
